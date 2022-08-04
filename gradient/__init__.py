@@ -19,7 +19,6 @@ def factory(base_url, id, token):
 
         def get(self, resource = None, id = None):
             url = self.format_url( resource, id )
-            print( url )
             return requests.get( url, auth=self.auth() )
 
         def post(self, body, resource = None, id = None):
